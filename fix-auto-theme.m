@@ -1,18 +1,28 @@
 #import <Foundation/Foundation.h>
 
-bool SLSGetAppearanceThemeLegacy(void);
-bool SLSGetAppearanceThemeSwitchesAutomatically(void);
+BOOL SLSGetAppearanceThemeLegacy(void);
+BOOL SLSGetAppearanceThemeSwitchesAutomatically(void);
+
+void SLSSetAppearanceThemeLegacy(BOOL);
+void SLSSetAppearanceThemeSwitchesAutomatically(BOOL);
 
 int main() {
-	if (SLSGetAppearanceThemeLegacy()) {
-		printf("Dark\n");
-	} else {
-		printf("Light\n");
-	}
+
 	if (SLSGetAppearanceThemeSwitchesAutomatically()) {
-		printf("Auto\n");
-	} else {
-		printf("Not Auto\n");
+
+		SLSSetAppearanceThemeSwitchesAutomatically(NO);
+
+		// if dark mode is on
+		if (SLSGetAppearanceThemeLegacy()) {
+			SLSSetAppearanceThemeLegacy(YES);
+		} else {
+			SLSSetAppearanceThemeLegacy(NO);
+		}
+
+		SLSSetAppearanceThemeSwitchesAutomatically(YES);
+
 	}
+
 	return 0;
+
 }
