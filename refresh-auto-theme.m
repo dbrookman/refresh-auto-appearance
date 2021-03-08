@@ -9,6 +9,7 @@ void SLSSetAppearanceThemeLegacy(BOOL);
 int main() {
 
 	if (SLSGetAppearanceThemeSwitchesAutomatically()) {
+
 		SLSSetAppearanceThemeSwitchesAutomatically(NO);
 
 		// if dark mode is on
@@ -19,6 +20,7 @@ int main() {
 		}
 
 		SLSSetAppearanceThemeSwitchesAutomatically(YES);
+
 	}
 
 	return 0;
