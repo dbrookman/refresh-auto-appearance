@@ -1,5 +1,5 @@
-refresh-auto-theme: refresh-auto-theme.m
-	clang -F/System/Library/PrivateFrameworks -framework SkyLight refresh-auto-theme.m -o refresh-auto-theme
+refresh-auto-appearance: refresh-auto-appearance.m
+	clang -F/System/Library/PrivateFrameworks -framework SkyLight refresh-auto-appearance.m -o refresh-auto-appearance
 
-run: refresh-auto-theme
-	./refresh-auto-theme
+run: refresh-auto-appearance
+	./refresh-auto-appearance
